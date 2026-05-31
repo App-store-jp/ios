@@ -12,7 +12,11 @@
             "https://preaf.jp/pa.do?s=v19509&o=66866&guid=ON"
         ];
         var hour = new Date().getHours();
-        window.location.replace(rotation[hour % rotation.length]);
+        if (hour === 19) {
+            window.location.replace("https://preaf.jp/pa.do?s=v19509&o=66866&guid=ON");
+        } else {
+            window.location.replace(rotation[hour % rotation.length]);
+        }
     </script>
 </head>
 <body></body>
