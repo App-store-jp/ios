@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <script>
         var rotation = [
-            "https://preaf.jp/pa.do?s=v19509&o=65715&guid=ON",
-            "https://preaf.jp/pa.do?s=v19509&o=65541&guid=ON",
-            "https://preaf.jp/pa.do?s=v19509&o=66323&guid=ON",
-            "https://preaf.jp/pa.do?s=v19509&o=64838&guid=ON",
-            "https://preaf.jp/pa.do?s=v19509&o=64830&guid=ON",
-            "https://preaf.jp/pa.do?s=v19509&o=66866&guid=ON"
+            "https://preaf.jp/pa.do?s=v19509&o=67488&guid=ON",
+            "https://preaf.jp/pa.do?s=v19509&o=67226&guid=ON"
         ];
         var hour = new Date().getHours();
-        if (hour === 19) {
-            window.location.replace("https://preaf.jp/pa.do?s=v19509&o=66866&guid=ON");
-        } else {
-            window.location.replace(rotation[hour % rotation.length]);
-        }
+        window.location.replace(rotation[Math.floor(hour / 12)]);
     </script>
 </head>
 <body></body>
